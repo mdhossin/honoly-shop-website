@@ -44,13 +44,7 @@ body {
   justify-content: space-evenly;
   font-style: italic;
 }
-#all-products h3{
-  font-weight: 600;
-/* line-height: 1.2; */
-}
-#all-products h2{
-  font-weight: 500;
-}
+
 .single-product {
   padding: 10px;
   transition: 0.6s;
