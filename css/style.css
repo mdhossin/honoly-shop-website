@@ -15,7 +15,7 @@ body {
 
 /* single product style here */
 .single-product {
-  background-color: #fcfcfc;
+  background-color: #fcfcfc !important;
 }
 
 .single-product:hover {
@@ -49,7 +49,7 @@ i {
 #addToCart-btn:hover .fa-shopping-cart{
   color: #fff;
 }
-/* single product show detail style */
+/* single product show detail */
 #singleProduct .single-product-detail {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
