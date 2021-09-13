@@ -36,14 +36,6 @@ body {
   justify-content: center;
   
 }
-#all-products i{
-  color: #FD7E14;
-}
-#all-products .rating{
-  display: flex;
-  justify-content: space-evenly;
-  font-style: italic;
-}
 
 .single-product {
   padding: 10px;
@@ -82,12 +74,7 @@ body {
    text-align: center;
    margin-bottom: 30px;
 } 
-#single-product .rating {
-  display: flex;
-  justify-content: space-evenly;
-  font-style: italic;
-  color: #1196AB;
-}
+
 #single-product .single-product-detail h2{
   font-weight: 600;
 }

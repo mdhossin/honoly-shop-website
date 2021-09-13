@@ -21,19 +21,14 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <div class="rating">
-      <span>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
-      ${product.rating.rate}
+      <span>Rating :
+      ${product.rating.rate},
       </span>
-      <span>${product.rating.count} ratings</span>
+      <span>Count : ${product.rating.count}</span>
       </div>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">Add to cart</button>
-      <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-warning">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -111,14 +106,9 @@ const singleProductDisplay = (data) => {
       <h3>${data.title}</h3>
       <p>Category: ${data.category}</p>
       <div class="rating">
-      <span>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
-      ${data.rating.rate}</span>
-      <span>${data.rating.count} ratings</span>
+      <span> Rating :
+      ${data.rating.rate},</span>
+      <span>Count :${data.rating.count}</span>
       </div>
       <p class="description">${data.description.slice(0, 130)}</p>
       <h2>Price: $ ${data.price}</h2>
