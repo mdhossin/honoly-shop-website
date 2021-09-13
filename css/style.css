@@ -48,6 +48,13 @@ body {
   padding-right: 30px;
 }
 /* font awesome icon style */
+
+.rating{
+  font-style: italic;
+}
+.rating span{
+  color: #fd7e14;
+}
 i {
   color: #fd7e14;
 }
