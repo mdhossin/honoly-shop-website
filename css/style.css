@@ -42,11 +42,14 @@ body {
 .cart-main {
   padding-right: 30px;
 }
-
+/* font awesome icon style */
 i {
   color: #fd7e14;
 }
-
+#addToCart-btn:hover .fa-shopping-cart{
+  color: #fff;
+}
+/* single product show detail style */
 #singleProduct .single-product-detail {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;

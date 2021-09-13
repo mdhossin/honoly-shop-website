@@ -38,8 +38,10 @@ const showProducts = (products) => {
                     </div>
                     <div class="card-footer d-flex justify-content-around">
                      
-                      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">Add to cart</button>
-                    <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-danger">Details</button>
+                      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-primary">Add to cart
+                      <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-outline-danger">Details</button>
                      </div>
                   </div>        
       `;
