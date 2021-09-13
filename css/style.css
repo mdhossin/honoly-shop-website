@@ -6,7 +6,7 @@ body {
 .main-content{
   margin: 40px 0;
 }
-/* saech filed style  */
+/* saech field style  */
 .search-field {
   border: none;
   border-radius: 50px;
@@ -43,7 +43,7 @@ body {
 }
 #all-products h3{
   font-weight: 600;
-
+/* line-height: 1.2; */
 }
 #all-products h2{
   font-weight: 500;
@@ -55,7 +55,7 @@ body {
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 0 3px 9px black, inset 0 7px 9px white;
 }
 .product-image {
   width: 150px;
@@ -78,7 +78,8 @@ body {
   
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid rgb(216, 223, 223);
+  border: 0 3px 9px black,
+  inset 0 7px 9px white;
   padding: 20px;
    box-sizing: border-box; 
    text-align: center;
