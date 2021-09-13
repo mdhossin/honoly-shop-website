@@ -15,7 +15,12 @@ body {
 
 /* single product style here */
 .single-product {
-  background-color: #fcfcfc !important;
+ background-color: #fcfcfc !important;
+ transition: .3s all ease;
+ -webkit-transition: .3s all ease;
+ -moz-transition: .3s all ease;
+ -ms-transition: .3s all ease;
+ -o-transition: .3s all ease;
 }
 
 .single-product:hover {
