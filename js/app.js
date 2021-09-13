@@ -9,31 +9,44 @@ loadProducts();
 
 // show all product in UI
 const showProducts = (products) => {
+  // const divContainer = document.getElementById("all-products");
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `<div class="single-product h-100">
-      <div>
-    <img class="product-image" src=${image}></img>
-      </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <div class="rating">
-      <span>Rating :
-      ${product.rating.rate},
-      </span>
-      <span>Count : ${product.rating.count}</span>
-      </div>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">Add to cart</button>
-      <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-warning">Details</button></div>
+    div.classList.add("col");
+    div.innerHTML = `
+                <div class="single-product card h-100">
+                  <div class = "mx-auto pt-3">
+                    <img src="${image}" class="product-image" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">${product.title}</h5>
+                    <p class="card-text">
+                      Category: ${product.category}
+                    </p>
+                    <div class="rating">
+                     <span>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                       ${product.rating.rate},
+                      </span>
+                    <span>Ratings: ${product.rating.count}</span>
+                    </div>
+                    <h2 class="mt-2">Price: $ ${product.price}</h2>
+                    </div>
+                    <div class="card-footer d-flex justify-content-around">
+                     
+                      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">Add to cart</button>
+                    <button onclick="singleProductLoad(${product.id})" id="details-btn" class="btn btn-danger">Details</button>
+                     </div>
+                  </div>        
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
-// click add to cart button count product
+
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -97,21 +110,30 @@ const singleProductLoad = (id) => {
 };
 // show single prodct detils on ui
 const singleProductDisplay = (data) => {
-  const singleProductContainer = document.getElementById("single-product");
+  const singleProductContainer = document.getElementById("singleProduct");
   singleProductContainer.innerHTML = `
-    <div class="single-product-detail h-100">
-      <div>
-    <img class="product-image" src=${data.image}></img>
-      </div>
-      <h3>${data.title}</h3>
-      <p>Category: ${data.category}</p>
-      <div class="rating">
-      <span> Rating :
-      ${data.rating.rate},</span>
-      <span>Count :${data.rating.count}</span>
-      </div>
-      <p class="description">${data.description.slice(0, 130)}</p>
-      <h2>Price: $ ${data.price}</h2>
-      </div>
+      <div class="card mb-3 p-3 mx-auto single-product-detail" style="max-width: 700px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src=${data.image} class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${data.title}</h5>
+              <p class="card-text">Category: ${data.category}</p>
+              <div class="rating">
+                <span>
+                  <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                   ${data.rating.rate},</span>
+                  <span>Ratings: ${data.rating.count}</span>
+              </div>
+              <p class="description mt-2">${data.description}</p>
+             <h2>Price: $ ${data.price}</h2>
+            </div>
+          </div>
+        </div>
+    </div>
   `;
 };
