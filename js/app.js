@@ -21,7 +21,14 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <div class="rating">
-      <span>Rating : ${product.rating.rate}</span>
+      <span>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      ${product.rating.rate}
+      </span>
       <span>${product.rating.count} ratings</span>
       </div>
       <h2>Price: $ ${product.price}</h2>
@@ -104,7 +111,13 @@ const singleProductDisplay = (data) => {
       <h3>${data.title}</h3>
       <p>Category: ${data.category}</p>
       <div class="rating">
-      <span>Rating : ${data.rating.rate}</span>
+      <span>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      ${data.rating.rate}</span>
       <span>${data.rating.count} ratings</span>
       </div>
       <p class="description">${data.description.slice(0, 130)}</p>

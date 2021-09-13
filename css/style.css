@@ -36,6 +36,9 @@ body {
   justify-content: center;
   
 }
+#all-products i{
+  color: #FD7E14;
+}
 #all-products .rating{
   display: flex;
   justify-content: space-evenly;
